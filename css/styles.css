@@ -1,0 +1,28 @@
+body {
+    background-color: #efefef;
+    height: 200vh;
+}
+
+
+
+
+.bg-1 {
+    background-color: rgb(255, 255, 255);
+    height: 100vh;
+}
+
+.bg-2 {
+    background-color: rgb(70, 165, 165);
+    height: 100vh;
+}
+
+.miniBiker {
+    height: 80px;
+    width: 150px;
+    background-image: url('Bike.jpg');
+    background-size: 150px;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 0;
+
+}
