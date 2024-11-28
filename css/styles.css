@@ -1,14 +1,13 @@
 /* Allgemeine Einstellungen */
-
 body {
-    background-image: url('../images/Hintergrund.jpg'); 
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat; 
-    margin: 0; 
-    
+    background-image: url('../images/Hintergrund.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    height: 200vh; /* Verlängert die Seite für Scrolltrigger */
 }
-
 
 /* Abschnitt 1 Anfang Überschrift */
 
@@ -163,3 +162,8 @@ body {
 
 
 /* Abschnitt 5 Handherz Ende */
+
+.SebiHerz{
+    width: 80%;
+    height: auto;
+}
