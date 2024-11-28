@@ -214,7 +214,7 @@ gsap.fromTo(
         x: "50%", // Zielposition
         y: 1900, // Beibehalten der vertikalen Position
         opacity: 1, // Sichtbar
-        duration: 1.5, // Dauer
+        duration: 1, // Dauer
         ease: "power2.out", // Sanfte Animation
         scrollTrigger: {
             trigger: ".SebiHerz", // Element, das den Trigger auslöst
