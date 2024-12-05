@@ -108,7 +108,7 @@ gsap.registerPlugin(ScrollTrigger);
 gsap.to(".HandAmelie", {
     scrollTrigger: {
       trigger: ".container", // Der Bereich, der gescrollt wird
-      start: "top top", // Animation beginnt, wenn der Container oben im Viewport ist
+      start: "top+=400 top", // Animation beginnt, wenn der Container oben im Viewport ist
       end: "+=500", // Scrollbereich für die Animation
       scrub: true, // Bindet die Animation an den Scrollfortschritt
       pin: true, // Pinnt die Seite während der Animation
