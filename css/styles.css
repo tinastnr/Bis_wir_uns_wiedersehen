@@ -11,6 +11,20 @@ body {
 
 /* Abschnitt 1 Anfang Überschrift */
 
+.screen{
+  height: 100vh;
+  font-size: xx-large;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  line-height: 1;
+}
+
+h1{
+  font-family: windsong;
+  color: brown;
+}
 
 
 
