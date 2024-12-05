@@ -256,7 +256,7 @@ gsap.fromTo(
         opacity: 0 // Unsichtbar am Anfang
     },
     {
-        x: "10%", // Zielposition: 20% vom linken Rand
+        x: "-30%", // Zielposition: 20% vom linken Rand
         y: "1900", // Beibehalten der vertikalen Position
         opacity: 1, // Sichtbar
         duration: 1.5, // Dauer der Animation
