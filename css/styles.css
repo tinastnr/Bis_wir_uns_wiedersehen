@@ -7,6 +7,8 @@ body {
     margin: 0;
     padding: 0;
     height: 400vh; /* Verlängert die Seite für Scrolltrigger */
+    width:100vh;
+    
 }
 
 /* Abschnitt 1 Anfang Überschrift */
@@ -195,4 +197,9 @@ h1{
 .SebiHerz{
     width: 80%;
     height: auto;
+}
+
+.AmelieHerz{
+  width: 80%;
+  height: auto;
 }
