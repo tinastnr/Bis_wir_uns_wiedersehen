@@ -231,7 +231,7 @@ gsap.fromTo(
         opacity: 0 // Unsichtbar am Anfang
     },
     {
-        x: "50%", // Zielposition
+        x: "80%", // Zielposition
         y: 1900, // Beibehalten der vertikalen Position
         opacity: 1, // Sichtbar
         duration: 1, // Dauer
