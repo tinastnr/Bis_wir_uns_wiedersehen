@@ -1,5 +1,24 @@
 // Abschnitt 1 Überschrift:
 
+gsap.registerPlugin(ScrollTrigger);
+
+// teils mit hilfe von ChatGPT 21.11.2024, hat uns beim anfang geholfen 
+
+gsap.to(".HandAmelie", {
+    scrollTrigger: {
+      trigger: ".container", // Der Bereich, der gescrollt wird
+      start: "top top", // Animation beginnt, wenn der Container oben im Viewport ist
+      end: "+=500", // Scrollbereich für die Animation
+      scrub: true, // Bindet die Animation an den Scrollfortschritt
+      pin: true, // Pinnt die Seite während der Animation
+      markers: true
+    },
+    x: "50vw", // Hand bewegt sich von links bis zur Mitte
+    opacity: 1, // Hand wird sichtbar
+    ease: "power1.inOut",
+});
+
+
 
 
 

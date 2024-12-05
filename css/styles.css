@@ -88,7 +88,22 @@ body {
 
 /* Abschnitt 3 Amelie Hand */
 
+.container{
+    height: 300vh; 
+    position: relative;
+  }
 
+
+.HandAmelie {
+    position: absolute;
+    top: 30vh; 
+    left: -1100px;
+    width: 100px;
+    transform: translateY(-50%);
+    height: auto;
+    width: 80%;
+  }
+  
 
 
 
