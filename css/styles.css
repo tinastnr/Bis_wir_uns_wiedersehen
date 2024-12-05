@@ -8,6 +8,7 @@ body {
     padding: 0;
     height: 400vh; /* Verlängert die Seite für Scrolltrigger */
     width:100vh;
+    overflow-x: hidden;
     
 }
 
