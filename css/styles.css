@@ -1,15 +1,22 @@
 /* Allgemeine Einstellungen */
 body {
-    background-image: url('../images/Hintergrund.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    margin: 0;
-    padding: 0;
-    height: 400vh; /* Verlängert die Seite für Scrolltrigger */
-    width:100vh;
-    
+ 
+  margin: 0;
+  padding: 0;
+
 }
+
+.bgImg{
+  background-image: url('../images/Hintergrund.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  overflow: hidden;
+
+
+}
+
 
 /* Abschnitt 1 Anfang Überschrift */
 
@@ -67,8 +74,13 @@ h1{
 
 
 
+.HandSebi{
 
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
 
+}
 
 
 
@@ -103,20 +115,20 @@ h1{
 
 /* Abschnitt 3 Amelie Hand */
 
-.container{
-    height: 300vh; 
-    position: relative;
+.containerAmelie{
+  height: 30%;
   }
 
 
 .HandAmelie {
-    position: absolute;
     top: 80vh; 
     left: -1100px;
     width: 100px;
     transform: translateY(-50%);
     height: auto;
     width: 80%;
+    position: absolute;
+
   }
   
 
