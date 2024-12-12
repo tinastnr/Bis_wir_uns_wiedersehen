@@ -96,7 +96,30 @@
 
 
 
+// Originaltext in Buchstaben aufteilen
+const textElement = document.getElementById('animated-text-p1');
+const textContent = textElement.textContent; // Originaltext
+textElement.textContent = ''; // Text leeren, um Animation zu starten
 
+// Buchstaben einzeln in <span> verpacken
+const splitText = textContent.split('').map((char) => {
+    const span = document.createElement('span');
+    span.textContent = char;
+    textElement.appendChild(span);
+    return span;
+});
+
+// GSAP: Zeichen für Zeichen animieren
+gsap.fromTo(
+    splitText,
+    { opacity: 0 }, // Start: Buchstaben unsichtbar
+    {
+        opacity: 1, // Ziel: Buchstaben sichtbar
+        duration: 0.05, // Dauer pro Buchstabe
+        stagger: 0.05, // Verzögerung zwischen den Buchstaben
+        ease: 'power1.out', // Weiche Bewegung
+    }
+);
 
 
 // Abschnitt 3 Amelie Hand
