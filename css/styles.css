@@ -226,14 +226,26 @@ h1{
 /* Abschnitt 5 Handherz Ende */
 
 
-
-
-.SebiHerz{
-    width: 110%;
-    height: auto;
+.herzhand {
+  height: 1000px; /* Bestehende Höhe */
+  display: flex;
+  align-items: center; /* Vertikal zentriert */
+  justify-content: center; /* Beide Bilder auf die Mitte ausrichten */
+  position: relative;
+  overflow: hidden; /* Verhindert sichtbare Elemente außerhalb des Containers */
 }
 
-.AmelieHerz{
-  width: 110%;
+/* Bilder */
+.SebiHerz {
+  width: 70%;
   height: auto;
+  position: relative;
+  transform: translateX(100%); /* Start außerhalb des Bildschirms (rechts) */
+}
+
+.AmelieHerz {
+  width: 75%;
+  height: auto;
+  position: relative;
+  transform: translateX(-100%); /* Start außerhalb des Bildschirms (links) */
 }
