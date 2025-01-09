@@ -225,22 +225,18 @@ h1{
 /* Abschnitt 5 Handherz Ende */
 
 
-
-/* Keine Änderungen am Body */
-
-/* Container */
 .herzhand {
   height: 1000px; /* Bestehende Höhe */
   display: flex;
   align-items: center; /* Vertikal zentriert */
-  justify-content: space-between; /* Bilder in der gewünschten Endposition */
+  justify-content: center; /* Beide Bilder auf die Mitte ausrichten */
   position: relative;
   overflow: hidden; /* Verhindert sichtbare Elemente außerhalb des Containers */
 }
 
 /* Bilder */
 .SebiHerz {
-  width: 60%;
+  width: 70%;
   height: auto;
   position: relative;
   transform: translateX(100%); /* Start außerhalb des Bildschirms (rechts) */
