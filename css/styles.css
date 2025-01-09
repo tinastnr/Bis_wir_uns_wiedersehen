@@ -50,6 +50,7 @@ h1{
 
 .animated-text {
   white-space: pre-wrap;
+  display: none;
 }
 
 
