@@ -242,57 +242,28 @@ gsap.to(".HandAmelie", {
 // Abschnitt 5 Handherz Ende
 
 
-// // GSAP mit ScrollTrigger
-// gsap.registerPlugin(ScrollTrigger);
+// GSAP und ScrollTrigger-Plugin verwenden
+gsap.registerPlugin(ScrollTrigger);
 
-// // Animation
-// gsap.fromTo(
-//     ".SebiHerz",
-//     {
-//         x: "100%", // Startposition: außerhalb des Bildschirms
-//         y: 1900, // Vertikale Position
-//         opacity: 0 // Unsichtbar am Anfang
-//     },
-//     {
-//         x: "80%", // Zielposition
-//         y: 1900, // Beibehalten der vertikalen Position
-//         opacity: 1, // Sichtbar
-//         duration: 1, // Dauer
-//         ease: "power2.out", // Sanfte Animation
-//         scrollTrigger: {
-//             trigger: ".SebiHerz", // Element, das den Trigger auslöst
-//             start: "top center", // Startpunkt der Animation
-//             end: "bottom center", // Optional: Endpunkt, wenn es wieder verschwinden soll
-//             toggleActions: "play reverse none none", // Einblenden beim Scrollen nach unten, Ausblenden beim Scrollen nach oben
-//             markers: true // Optional: Marker für Debugging
-//         }
-//     }
-// );
-
-
-
-// gsap.fromTo(
-//     ".AmelieHerz",
-//     {
-//         x: "100%", // Startposition: außerhalb des Bildschirms
-//         y: 1900, // Vertikale Position
-//         opacity: 0 // Unsichtbar am Anfang
-//     },
-//     {
-//         x: "50%", // Zielposition
-//         y: 1900, // Beibehalten der vertikalen Position
-//         opacity: 1, // Sichtbar
-//         duration: 1, // Dauer
-//         ease: "power2.out", // Sanfte Animation
-//         scrollTrigger: {
-//             trigger: ".SebiHerz", // Element, das den Trigger auslöst
-//             start: "top center", // Startpunkt der Animation
-//             end: "bottom center", // Optional: Endpunkt, wenn es wieder verschwinden soll
-//             toggleActions: "play reverse none none", // Einblenden beim Scrollen nach unten, Ausblenden beim Scrollen nach oben
-//             markers: true // Optional: Marker für Debugging
-//         }
-//     }
-// );
+// Animation für die Bilder
+gsap.timeline({
+  scrollTrigger: {
+    trigger: ".herzhand", // Der Bereich, bei dem die Animation startet
+    start: "top center", // Startpunkt der Animation (Scroller erreicht Mitte des Bildschirms)
+    end: "center center", // Endpunkt der Animation
+    scrub: true, // Animation synchron mit dem Scrollen
+  }
+})
+  .to(".AmelieHerz", {
+    x: "0%", // Linkes Bild bewegt sich in die Zielposition
+    duration: 1.5,
+    ease: "power2.out",
+  })
+  .to(".SebiHerz", {
+    x: "0%", // Rechtes Bild bewegt sich in die Zielposition
+    duration: 1.5,
+    ease: "power2.out",
+  }, "<"); // Beide Animationen starten gleichzeitig
 
 
 
