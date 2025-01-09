@@ -94,6 +94,7 @@
 
 
 
+// Erscheinende Schrift
 
 
 // Originaltext in Buchstaben aufteilen
@@ -107,6 +108,7 @@ const splitText = textContent.split('').map((char) => {
     span.textContent = char;
     textElement.appendChild(span);
     return span;
+    textElement.style.fontSize = '2rem'; 
 });
 
 // GSAP: Zeichen für Zeichen animieren
@@ -141,6 +143,11 @@ gsap.to(".HandAmelie", {
     opacity: 1, // Hand wird sichtbar
     ease: "power1.inOut",
 });
+
+
+
+
+
 
 
 
