@@ -51,6 +51,10 @@ h1{
 .animated-text {
   white-space: pre-wrap;
   display: none;
+  font-family: "Waterfall", serif;
+  font-style: normal;
+  font-size: 50px;
+  line-height: 1.0;
 }
 
 
