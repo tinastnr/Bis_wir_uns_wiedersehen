@@ -259,10 +259,32 @@ gsap.to(".HandAmelie", {
 
 
 // Abschnitt 5 Handherz Ende
+ 
+// GSAP und ScrollTrigger-Plugin verwenden
+gsap.registerPlugin(ScrollTrigger);
 
 
+// Animation für die Bilder
+gsap.timeline({
+  scrollTrigger:{
+    trigger: ".herzhand",
+    start: "top center",
+    end:" center center",
+    scrub: true,
+  }
+})
 
+.to(".AmelieHerz", {
+  x: "0%",
+  duration: 5.5,
+  ease:"power2.out",
+}, "<")
 
+.to(".SebiHerz", {
+  x: "0%",
+  duration: 5.5,
+  ease:"power2.out",
+}, "<");
 
 
 
