@@ -275,13 +275,13 @@ gsap.timeline({
 })
 
 .to(".AmelieHerz", {
-  x: "0%",
+  x: "8%",
   duration: 5.5,
   ease:"power2.out",
 }, "<")
 
 .to(".SebiHerz", {
-  x: "0%",
+  x: "-8%",
   duration: 5.5,
   ease:"power2.out",
 }, "<");

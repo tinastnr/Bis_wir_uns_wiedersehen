@@ -240,8 +240,10 @@ h1{
   height: auto; /* Automatische Höhe, proportional zur Breite */
   position: relative;
   transform: translateX(100%); /* Start außerhalb des Bildschirms (rechts) */
+  top: -75px; /* Bewegt das Bild 20px nach oben */
   transition: transform 1.5s ease; /* Optional für sanfte Animation ohne JS */
 }
+
 
 .AmelieHerz {
   width: 78%; /* Breite des Bildes */
