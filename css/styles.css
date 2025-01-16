@@ -240,7 +240,7 @@ h1{
   height: auto; /* Automatische Höhe, proportional zur Breite */
   position: relative;
   transform: translateX(100%); /* Start außerhalb des Bildschirms (rechts) */
-  transition: transform 0.5s ease; /* Optional für sanfte Animation ohne JS */
+  transition: transform 1.5s ease; /* Optional für sanfte Animation ohne JS */
 }
 
 .AmelieHerz {
@@ -248,5 +248,5 @@ h1{
   height: auto; /* Automatische Höhe, proportional zur Breite */
   position: relative;
   transform: translateX(-100%); /* Start außerhalb des Bildschirms (links) */
-  transition: transform 0.5s ease; /* Optional für sanfte Animation ohne JS */
+  transition: transform 1.5s ease; /* Optional für sanfte Animation ohne JS */
 }
