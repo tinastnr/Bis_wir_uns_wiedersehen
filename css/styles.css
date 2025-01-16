@@ -252,3 +252,19 @@ h1{
   transform: translateX(-100%); /* Start außerhalb des Bildschirms (links) */
   transition: transform 1.5s ease; /* Optional für sanfte Animation ohne JS */
 }
+
+
+
+.kussmund1 {
+  width: 15%;
+  position: absolute;
+  transform: translateX(110%); /* Verschiebt das Element um die Hälfte seiner Breite nach links */
+}
+
+
+.kussmund2 {
+  width: 15%;
+  position: absolute;
+ 
+  transform: translateY(120%);
+}
