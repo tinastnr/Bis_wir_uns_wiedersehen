@@ -45,9 +45,6 @@ h1 {
 }
 
 
-
-
-
 .text-container {
   width: 60%;
   margin: auto;
@@ -272,20 +269,26 @@ h1 {
 .kussmund1 {
   width: 15%;
   position: absolute;
-  transform: translateX(110%); /* Verschiebt das Element um die Hälfte seiner Breite nach links */
+  transform: translateX(50%) translateY(50px); /* Verschiebt das Element weiter nach rechts */
+  opacity: 0; /* Unsichtbar */
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Weiche Animation */
 }
 
 
 .kussmund2 {
   width: 15%;
   position: absolute;
- 
-  transform: translateY(120%);
+  transform: translateY(100px) scaleX(-1); /* Nach unten verschieben UND horizontal spiegeln */
+  opacity: 0; /* Unsichtbar */
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Weiche Animation */
 }
 
-.kussmund1,
-.kussmund2 {
-  opacity: 0; /* Komplett unsichtbar */
-  transform: translateY(50px); /* Leicht nach unten verschoben */
-  transition: opacity 0.5s ease, transform 0.5s ease; /* Fallback-Transition */
+.kussmund3 {
+  width: 15%;
+  position: absolute;
+  transform: translateX(500%) translateY(-50px) scaleX(-1); /* Verschiebt das Element weiter nach oben */
+  opacity: 0; /* Unsichtbar */
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Weiche Animation */
 }
+
+

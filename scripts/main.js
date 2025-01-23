@@ -308,6 +308,18 @@ document.addEventListener("DOMContentLoaded", () => {
       scrub: true, // Abhängig vom Scroll-Fortschritt
     },
   });
+
+  gsap.to(".kussmund3", {
+    opacity: 1, // Sichtbar machen
+    duration: 1.5, // Animationsdauer
+    ease: "none", // Keine zusätzliche Beschleunigung
+    scrollTrigger: {
+      trigger: ".herzhand", // Gleicher Trigger wie bei den Händen
+      start: "top center", // Startpunkt
+      end: "center center", // Endpunkt
+      scrub: true, // Abhängig vom Scroll-Fortschritt
+    },
+  });
 });
 
 
