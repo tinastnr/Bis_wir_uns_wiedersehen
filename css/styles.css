@@ -21,21 +21,30 @@ body {
 
 /* Abschnitt 1 Anfang Überschrift */
 
-.screen{
-  height: 100vh;
-  font-size: xx-large;
+.screen {
+  height: auto;
   text-align: center;
-  align-items: center;
-  justify-content: center;
   display: flex;
-  line-height: 1;
+  flex-direction: column; /* Inhalte vertikal ausrichten */
+  align-items: center; /* Horizontale Zentrierung */
+  justify-content: flex-start; /* Inhalte oben ausrichten */
+  padding-top: 13%; /* Abstand vom oberen Rand */
 }
 
-h1{
-  font-family: monospace;
+h1 {
+  font-family: "Gwendolyn", serif;
   color: brown;
-  font-size: 100px;
+  font-size: 120px;
+  line-height: 0.8; /* Zeilenabstand anpassen */
+  margin: 0; /* Entfernt Außenabstand */
 }
+
+.Herz {
+  margin: 0; /* Abstand zwischen Text und Bild */
+  height: auto;
+}
+
+
 
 
 
