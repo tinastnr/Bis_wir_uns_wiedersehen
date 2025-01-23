@@ -32,8 +32,9 @@ body {
 }
 
 h1{
-  font-family: windsong;
+  font-family: monospace;
   color: brown;
+  font-size: 100px;
 }
 
 
