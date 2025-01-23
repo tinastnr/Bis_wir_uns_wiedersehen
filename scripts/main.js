@@ -258,39 +258,57 @@ gsap.to(".HandAmelie", {
 
 
 
-// Abschnitt 5 Handherz Ende
- 
 // GSAP und ScrollTrigger-Plugin verwenden
 gsap.registerPlugin(ScrollTrigger);
 
-
-// Animation für die Bilder
+// Animation für die Hände (Herz-Animation)
 gsap.timeline({
-  scrollTrigger:{
+  scrollTrigger: {
     trigger: ".herzhand",
     start: "top center",
-    end:" center center",
-    scrub: true,
-  }
+    end: "center center",
+    scrub: true, // Animationsfortschritt gekoppelt an den Scroll-Fortschritt
+  },
 })
+  .to(".AmelieHerz", {
+    x: "8%", // Bewegung nach rechts
+    duration: 5.5,
+    ease: "power2.out",
+  }, "<")
+  .to(".SebiHerz", {
+    x: "-8%", // Bewegung nach links
+    duration: 5.5,
+    ease: "power2.out",
+  }, "<");
 
-.to(".AmelieHerz", {
-  x: "8%",
-  duration: 5.5,
-  ease:"power2.out",
-}, "<")
+// Warten, bis die DOM geladen ist
+document.addEventListener("DOMContentLoaded", () => {
+  // ScrollTrigger für den ersten Kussmund
+  gsap.to(".kussmund1", {
+    opacity: 1, // Sichtbar machen
+    duration: 1.5, // Animationsdauer
+    ease: "none", // Keine zusätzliche Beschleunigung
+    scrollTrigger: {
+      trigger: ".herzhand", // Gleicher Trigger wie bei den Händen
+      start: "top center", // Startpunkt
+      end: "center center", // Endpunkt
+      scrub: true, // Abhängig vom Scroll-Fortschritt
+    },
+  });
 
-.to(".SebiHerz", {
-  x: "-8%",
-  duration: 5.5,
-  ease:"power2.out",
-}, "<");
-
-
-
-
-
-
+  // ScrollTrigger für den zweiten Kussmund
+  gsap.to(".kussmund2", {
+    opacity: 1, // Sichtbar machen
+    duration: 1.5, // Animationsdauer
+    ease: "none", // Keine zusätzliche Beschleunigung
+    scrollTrigger: {
+      trigger: ".herzhand", // Gleicher Trigger wie bei den Händen
+      start: "top center", // Startpunkt
+      end: "center center", // Endpunkt
+      scrub: true, // Abhängig vom Scroll-Fortschritt
+    },
+  });
+});
 
 
 
