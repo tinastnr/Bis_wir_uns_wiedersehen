@@ -1,3 +1,20 @@
+// Audio
+// Audio
+function toggleMusic() {
+  const audio = document.getElementById("audio-player");
+
+  if (audio.paused) {
+    audio.play(); // Startet die Musik
+  } else {
+    audio.pause(); // Pausiert die Musik
+  }
+}
+
+
+
+
+
+
 // Abschnitt 1 Überschrift:
 
 
