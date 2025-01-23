@@ -282,3 +282,10 @@ h1 {
  
   transform: translateY(120%);
 }
+
+.kussmund1,
+.kussmund2 {
+  opacity: 0; /* Komplett unsichtbar */
+  transform: translateY(50px); /* Leicht nach unten verschoben */
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Fallback-Transition */
+}
