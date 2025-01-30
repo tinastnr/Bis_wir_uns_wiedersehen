@@ -1,14 +1,35 @@
 // Audio
-// Audio
+// Audio und Schallplattenanimation mit GSAP
+let spinning = false; // Variable zur Kontrolle der Rotation
+let rotationTween; // Speichert die GSAP-Animation
+
 function toggleMusic() {
   const audio = document.getElementById("audio-player");
+  const schallplatte = document.querySelector(".Schallplatte-button");
 
   if (audio.paused) {
     audio.play(); // Startet die Musik
+    
+    // Falls noch keine Rotation existiert oder sie gestoppt wurde, erstelle eine neue Animation
+    if (!spinning) {
+      rotationTween = gsap.to(schallplatte, { 
+        rotation: "+=360", // Endlosdrehung
+        duration: 2, 
+        ease: "linear", 
+        repeat: -1 // Unendlich wiederholen
+      });
+      spinning = true;
+    }
   } else {
     audio.pause(); // Pausiert die Musik
+    
+    if (spinning) {
+      rotationTween.pause(); // Stoppt die Rotation
+      spinning = false;
+    }
   }
 }
+
 
 
 
