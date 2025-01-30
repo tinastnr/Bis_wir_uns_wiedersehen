@@ -68,10 +68,33 @@ function toggleMusic() {
 
 // Abschnitt 2 Sebi Hand
 
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.set(".HandSebiIMG",{
+  x: "50vw"
+})
+
+// Animation für die Hand
+gsap.to(".HandSebiIMG", {
+  x: "0",
+  opacity: 1, // Hand wird sichtbar
+  ease: "power1.inOut",
+  pinSpacing: false,
+  pin: true,
 
 
+  scrollTrigger: {
+    trigger: ".HandSebi", // Der Bereich, der gescrollt wird
+    start: "top center", // Animation beginnt, wenn der Container oben im Viewport ist
+    end: "bottom top", // Scrollbereich für die Animation
+    scrub: true, // Bindet die Animation an den Scrollfortschritt
+    markers: true
+    
+    
+  
+  },
 
-
+});
 
 
 
@@ -159,23 +182,23 @@ gsap.to(".textcontainer", {
 
 // Abschnitt 3 Amelie Hand
 
-gsap.registerPlugin(ScrollTrigger);
+// gsap.registerPlugin(ScrollTrigger);
 
-// teils mit hilfe von ChatGPT 21.11.2024, hat uns beim anfang geholfen 
+// // teils mit hilfe von ChatGPT 21.11.2024, hat uns beim anfang geholfen 
 
-gsap.to(".HandAmelie", {
-  scrollTrigger: {
-    trigger: ".container", // Der Bereich, der gescrollt wird
-    start: "top+=400 top", // Animation beginnt, wenn der Container oben im Viewport ist
-    end: "+=500", // Scrollbereich für die Animation
-    scrub: true, // Bindet die Animation an den Scrollfortschritt
-    pin: true, // Pinnt die Seite während der Animation
-    markers: true
-  },
-  x: "50vw", // Hand bewegt sich von links bis zur Mitte
-  opacity: 1, // Hand wird sichtbar
-  ease: "power1.inOut",
-});
+// gsap.to(".HandAmelie", {
+//   scrollTrigger: {
+//     trigger: ".containerAmelie", // Der Bereich, der gescrollt wird
+//     start: "top+=400 top", // Animation beginnt, wenn der Container oben im Viewport ist
+//     end: "+=500", // Scrollbereich für die Animation
+//     scrub: true, // Bindet die Animation an den Scrollfortschritt
+//     pin: true, // Pinnt die Seite während der Animation
+//     markers: true
+//   },
+//   x: "50vw", // Hand bewegt sich von links bis zur Mitte
+//   opacity: 1, // Hand wird sichtbar
+//   ease: "power1.inOut",
+// });
 
 
 

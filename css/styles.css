@@ -118,11 +118,12 @@ h1 {
 
 
 
-.HandSebi{
+.HandSebiIMG{
 
   object-fit: cover;
   height: 100%;
   width: 100%;
+
 
 }
 
@@ -159,7 +160,7 @@ h1 {
 
 /* Abschnitt 3 Amelie Hand */
 
-.containerAmelie{
+/* .containerAmelie{
   height: 30%;
   }
 
@@ -174,7 +175,7 @@ h1 {
     position: absolute;
 
   }
-  
+   */
 
 
 
