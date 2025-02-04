@@ -49,7 +49,6 @@ const timeline = gsap.timeline({
         end: "bottom top", 
         scrub: true,
         pin: true, 
-        markers: true,
         onEnter: () => console.log("ScrollTrigger entered"),
         onLeave: () => console.log("ScrollTrigger left"),
         onUpdate: (self) => console.log("ScrollTrigger progress:", self.progress)
@@ -90,7 +89,6 @@ const timeline2 = gsap.timeline({
         end: "bottom top", 
         scrub: true,
         pin: true, 
-        markers: true,
         onEnter: () => console.log("ScrollTrigger entered"),
         onLeave: () => console.log("ScrollTrigger left"),
         onUpdate: (self) => console.log("ScrollTrigger progress:", self.progress)
@@ -132,7 +130,6 @@ const timeline3 = gsap.timeline({
         end: "bottom top",
         scrub: true,
         pin: true, 
-        markers: true,
         onEnter: () => console.log("ScrollTrigger entered"),
         onLeave: () => console.log("ScrollTrigger left"),
         onUpdate: (self) => console.log("ScrollTrigger progress:", self.progress)
