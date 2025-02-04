@@ -70,142 +70,90 @@ function toggleMusic() {
 
 gsap.registerPlugin(ScrollTrigger);
 
-gsap.set(".HandSebiIMG",{
-  x: "50vw"
-})
+console.log("ScrollTrigger registered");
 
-// Animation für die Hand
-gsap.to(".HandSebiIMG", {
-  x: "0",
-  opacity: 1, // Hand wird sichtbar
-  ease: "power1.inOut",
-  pinSpacing: false,
-  pin: true,
+gsap.set(".textsection", {opacity: 0});
 
-
-  scrollTrigger: {
-    trigger: ".HandSebi", // Der Bereich, der gescrollt wird
-    start: "top center", // Animation beginnt, wenn der Container oben im Viewport ist
-    end: "bottom top", // Scrollbereich für die Animation
-    scrub: true, // Bindet die Animation an den Scrollfortschritt
-    markers: true
-    
-    
-  
-  },
-
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Deine Funktion
-function textfunction() {
-
-  // Originaltext in Buchstaben aufteilen
-  const textElement = document.getElementById('animated-text-p1');
-  const textContent = textElement.textContent; // Originaltext
-  textElement.textContent = ''; // Text leeren, um Animation zu starten
-  textElement.style.display = "block";
-
-  // Buchstaben einzeln in <span> verpacken
-  const splitText = textContent.split('').map((char) => {
-    const span = document.createElement('span');
-    span.textContent = char;
-    textElement.appendChild(span);
-    return span;
-  });
-
-  // GSAP: Zeichen für Zeichen animieren
-  gsap.fromTo(
-    splitText,
-    { opacity: 0 }, // Start: Buchstaben unsichtbar
-    {
-      opacity: 1, // Ziel: Buchstaben sichtbar
-      duration: 0.03, // Dauer pro Buchstabe
-      stagger: 0.03, // Verzögerung zwischen den Buchstaben
-      ease: 'power1.out', // Weiche Bewegung
+const timeline = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".handsection",
+        start: "top top", // Adjusted start position
+        end: "bottom top", // Adjusted end position
+        scrub: true,
+        pin: true, // Keeps it in place while scrolling
+        markers: true,
+        onEnter: () => console.log("ScrollTrigger entered"),
+        onLeave: () => console.log("ScrollTrigger left"),
+        onUpdate: (self) => console.log("ScrollTrigger progress:", self.progress)
     }
-  );
-
-}
-
-
-
-
-
-
-gsap.to(".textcontainer", {
-
-  scrollTrigger: {
-    trigger: ".textcontainer",  // Element, das den Trigger auslöst
-    start: "700px",  // Startpunkt der Animation
-    onEnter: textfunction,  // Funktion wird aufgerufen, wenn Trigger aktiv wird
-    markers: true,        // Debug-Markierungen anzeigen
-  },
 });
+
+timeline
+    .fromTo(".hand-image-container", { x: "100%" }, { x: "30%", ease: "power2.out", duration: 1 })
+
+    .to(".textsection", { opacity: 1, duration: 1 }) // Längere Dauer für bessere Sichtbarkeit
+    .to(".rose", { opacity: 1, duration: 1 }) // Längere Dauer für bessere Sichtbarkeit
+    .to(".hand-image-container", { x: "30%", ease: "none", duration: 1 })
+    .to(".rose", { opacity: 0, duration: 1 }, "+=0.5") // Bleibt etwas länger sichtbar
+    .to(".textsection", { opacity: 0, duration: 1 }, "+=0.5") // Bleibt etwas länger sichtbar
+    .to(".hand-image-container", { x: "100%", ease: "power2.in", duration: 1 });
+
+console.log("Timeline created:", timeline);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // Abschnitt 3 Amelie Hand
 
-// gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger);
 
-// // teils mit hilfe von ChatGPT 21.11.2024, hat uns beim anfang geholfen 
+console.log("ScrollTrigger registered");
 
-// gsap.to(".HandAmelie", {
-//   scrollTrigger: {
-//     trigger: ".containerAmelie", // Der Bereich, der gescrollt wird
-//     start: "top+=400 top", // Animation beginnt, wenn der Container oben im Viewport ist
-//     end: "+=500", // Scrollbereich für die Animation
-//     scrub: true, // Bindet die Animation an den Scrollfortschritt
-//     pin: true, // Pinnt die Seite während der Animation
-//     markers: true
-//   },
-//   x: "50vw", // Hand bewegt sich von links bis zur Mitte
-//   opacity: 1, // Hand wird sichtbar
-//   ease: "power1.inOut",
-// });
+gsap.set(".textsection2", {opacity: 0});
 
+const timeline2 = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".handsection2",
+        start: "top top", // Adjusted start position
+        end: "bottom top", // Adjusted end position
+        scrub: true,
+        pin: true, // Keeps it in place while scrolling
+        markers: true,
+        onEnter: () => console.log("ScrollTrigger entered"),
+        onLeave: () => console.log("ScrollTrigger left"),
+        onUpdate: (self) => console.log("ScrollTrigger progress:", self.progress)
+    }
+});
 
+timeline2
+    .fromTo(".hand-image-container2", { x: "-100%" }, { x: "-40%", ease: "power2.out", duration: 1 })
+    .to(".textsection2", { opacity: 1, duration: 1 }) // Längere Dauer für bessere Sichtbarkeit
+    .to(".mond", { opacity: 1, duration: 1 }) // Längere Dauer für bessere Sichtbarkeit
+    .to(".hand-image-container2", { x: "-40%", ease: "none", duration: 1 })
+    .to(".mond", { opacity: 0, duration: 1 }) // Längere Dauer für bessere Sichtbarkeit
+    .to(".textsection2", { opacity: 0, duration: 1 }, "+=0.5") // Bleibt etwas länger sichtbar
+    .to(".hand-image-container2", { x: "-100%", ease: "power2.in", duration: 1 });
 
-
-
-
-
+console.log("Timeline created:", timeline2);
 
 
 
@@ -250,6 +198,36 @@ gsap.to(".textcontainer", {
 // Abschnitt 4 Sebi Hand
 
 
+gsap.registerPlugin(ScrollTrigger);
+
+console.log("ScrollTrigger registered");
+
+gsap.set(".textsection3", {opacity: 0});
+
+const timeline3 = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".handsection3",
+        start: "top top", // Adjusted start position
+        end: "bottom top", // Adjusted end position
+        scrub: true,
+        pin: true, // Keeps it in place while scrolling
+        markers: true,
+        onEnter: () => console.log("ScrollTrigger entered"),
+        onLeave: () => console.log("ScrollTrigger left"),
+        onUpdate: (self) => console.log("ScrollTrigger progress:", self.progress)
+    }
+});
+
+timeline3
+    .fromTo(".hand-image-container3", { x: "100%" }, { x: "30%", ease: "power2.out", duration: 1 })
+    .to(".textsection3", { opacity: 1, duration: 1 }) // Längere Dauer für bessere Sichtbarkeit
+    .to(".taube", { opacity: 1, duration: 1 }) // Längere Dauer für bessere Sichtbarkeit
+    .to(".hand-image-container3", { x: "30%", ease: "none", duration: 1 })
+    .to(".taube", { opacity: 0, duration: 1 }, "+=0.5") // Bleibt etwas länger sichtbar
+    .to(".textsection3", { opacity: 0, duration: 1 }, "+=0.5") // Bleibt etwas länger sichtbar
+    .to(".hand-image-container3", { x: "100%", ease: "power2.in", duration: 1 });
+
+console.log("Timeline created:", timeline3);
 
 
 
@@ -378,3 +356,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+
+const lenis = new Lenis({
+  // Valeur entre 0 et 1
+  // Valeur par défaut : 0,1
+  // Plus la valeur est faible, plus le scroll sera fluide
+  lerp: 0.05, 
+  // Valeur par défaut : 1
+  // Plus la valeur est haute, plus le défilement sera rapide 
+  wheelMultiplier: 1, 
+});
+
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+requestAnimationFrame(raf);

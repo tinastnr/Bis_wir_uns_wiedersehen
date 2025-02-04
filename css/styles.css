@@ -54,28 +54,9 @@ h1 {
 }
 
 .Herz {
-  margin: 0; /* Abstand zwischen Text und Bild */
+  margin: 6rem; /* Abstand zwischen Text und Bild */
   height: auto;
-}
 
-
-.text-container {
-  width: 60%;
-  margin: auto;
-  text-align: left;
-  font-size: 1.5rem;
-  line-height: 2rem;
-  color: #000;
-  overflow: hidden;
-}
-
-.animated-text {
-  white-space: pre-wrap;
-  display: none;
-  font-family: "Waterfall", serif;
-  font-style: normal;
-  font-size: 50px;
-  line-height: 1.0;
 }
 
 
@@ -91,58 +72,59 @@ h1 {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* ANIMATION */
 
 /* Abschnitt 2 Sebi Hand */
 
-
-
-.HandSebiIMG{
-
-  object-fit: cover;
-  height: 100%;
-  width: 100%;
-
-
+.handsection {
+  position: relative;
+  height: 300vh;
+  overflow: hidden;
+  margin-bottom: -300vh; /* Add negative margin to reduce the gap */
+  /* border: 2px solid red; Debugging: Add border to see the section */
 }
 
+.hand-image-container {
+  position: absolute;
+  top: -10%;
+  left: 10%; /* Changed from -100% to 0 */
+  width: 90%;
+  height: 100vh;
+  background: url('../images/SebiHand.png') center/cover no-repeat;
+  /* border: 2px solid blue; Debugging: Add border to see the container */
+}
 
+.text{
+  font-family: "Waterfall", serif;
+  font-style: normal;
+  font-size: 3.5rem;
+  line-height: 1.0;
+  color: #000;
+  text-align: left;
+}
 
+.textsection {
+  position: relative;
+  z-index: 10; /* Höher als die Hand */
+  color: white; /* Falls Hintergrund dunkel ist */
+  width: 80%;
+  margin-top: 25%;
+  margin-left: 20%;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+.rose{
+  background: url('../images/rose.png');
+  position: absolute;
+  height: 20vh; /* Reduced from 30vh */
+  width: 20vw;  /* Reduced from 30vw */
+  background-size: contain; /* Changed from cover to contain */
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top: 16%; /* Adjusted from 20% */
+  margin-left: 8%; /* Added margin-left to position */
+  z-index: 10; /* Ensure it's above other elements */
+  opacity: 0; /* Start invisible for animation */
+}
 
 
 
@@ -160,42 +142,57 @@ h1 {
 
 /* Abschnitt 3 Amelie Hand */
 
-/* .containerAmelie{
-  height: 30%;
-  }
+.handsection2 {
+
+  position: relative;
+  height: 300vh;
+  overflow: hidden;
+  margin-bottom: -300vh; /* Add negative margin to reduce the gap */
+  /* border: 2px solid red; Debugging: Add border to see the section */
+}
+
+.hand-image-container2 {
+  position: absolute;
+  top: -6%;
+  left: 15%; /* Changed from -100% to 0 */
+  width: 100%;
+  height: 100vh;
+  background: url('../images/AmelieHand.png') center/cover no-repeat;
+  /* border: 2px solid blue; Debugging: Add border to see the container */
+}
 
 
-.HandAmelie {
-    top: 80vh; 
-    left: -1100px;
-    width: 100px;
-    transform: translateY(-50%);
-    height: auto;
-    width: 80%;
-    position: absolute;
+.text2{
+  font-family: "Waterfall", serif;
+  font-style: normal;
+  font-size: 3.5rem;
+  line-height: 1.0;
+  color: #000;
+  text-align: right;
+}
 
-  }
-   */
+.textsection2 {
+  position: relative;
+  z-index: 10; /* Höher als die Hand */
+  color: white; /* Falls Hintergrund dunkel ist */
+  width: 80%;
+  margin-top: 27%;
 
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.mond{
+  background: url('../images/mond.png');
+  position: absolute;
+  height: 15vh; /* Reduced from 30vh */
+  width: 15vw;  /* Reduced from 30vw */
+  background-size: contain; /* Changed from cover to contain */
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top: 22%; /* Adjusted from 20% */
+  margin-left: 76%; /* Added margin-left to position */
+  z-index: 10; /* Ensure it's above other elements */
+  opacity: 0; /* Start invisible for animation */
+}
 
 
 
@@ -213,13 +210,55 @@ h1 {
 
 /* Abschnitt 4 Sebi Hand */
 
+.handsection3 {
+  position: relative;
+  height: 300vh;
+  overflow: hidden;
+  margin-bottom: -150vh; /* Add negative margin to reduce the gap */
+  /* border: 2px solid red; Debugging: Add border to see the section */
+}
 
+.hand-image-container3 {
+  position: absolute;
+  top: -9%;  /* Match the positioning of other hands */
+  left: 10%;
+  width: 90%;
+  height: 100vh;
+  background: url('../images/SebiHand.png') center/cover no-repeat;  /* Make sure image path is correct */
+  z-index: 1;  /* Add z-index to ensure proper layering */
+}
 
+.text3{
+  font-family: "Waterfall", serif;
+  font-style: normal;
+  font-size: 3.5rem;
+  line-height: 1.0;
+  color: #000;
+  text-align: left;
+}
 
+.textsection3 {
+  position: relative;
+  z-index: 10; /* Höher als die Hand */
+  color: white; /* Falls Hintergrund dunkel ist */
+  width: 80%;
+  margin-top: 27%;
+  margin-left: 20%;
+}
 
-
-
-
+.taube{
+  background: url('../images/taube.png');
+  position: absolute;
+  height: 15vh; /* Reduced from 30vh */
+  width: 15vw;  /* Reduced from 30vw */
+  background-size: contain; /* Changed from cover to contain */
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top: 19%; /* Adjusted from 20% */
+  margin-left: 10%; /* Added margin-left to position */
+  z-index: 10; /* Ensure it's above other elements */
+  opacity: 0; /* Start invisible for animation */
+}
 
 
 
