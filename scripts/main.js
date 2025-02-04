@@ -201,7 +201,7 @@ document.addEventListener("DOMContentLoaded", () => {
       scrub: true, 
     },
   });
-
+ 
   gsap.to(".kussmund3", {
     opacity: 1, 
     duration: 1.5, 
