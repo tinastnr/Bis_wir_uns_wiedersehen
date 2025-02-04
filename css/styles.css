@@ -7,6 +7,9 @@ body {
 
 }
 
+
+/* Background Image */
+
 .bgImg{
   background-image: url('../images/Hintergrund.jpg');
   background-size: cover;
@@ -21,14 +24,12 @@ body {
 /* Audio */
 
 .Schallplatte-button {
-  height: 100px; /* Höhe des Bildes */
-  width: 100px;  /* Breite des Bildes */
+  height: 100px; 
+  width: 100px; 
   position: relative;
-  top: 20px;    /* Verschiebt das Bild nach unten */
-  left: 20px;   /* Verschiebt das Bild nach rechts */
+  top: 20px;    
+  left: 20px;   
 }
-
-
 
 
 
@@ -39,34 +40,38 @@ body {
   height: auto;
   text-align: center;
   display: flex;
-  flex-direction: column; /* Inhalte vertikal ausrichten */
-  align-items: center; /* Horizontale Zentrierung */
-  justify-content: flex-start; /* Inhalte oben ausrichten */
-  padding-top: 13%; /* Abstand vom oberen Rand */
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: flex-start; 
+  padding-top: 11%; 
 }
 
 h1 {
   font-family: "Gwendolyn", serif;
   color: brown;
+  font-size: 150px;
+  line-height: 0.8; 
+  margin: 0; 
+}
+
+h1 span{
   font-size: 120px;
-  line-height: 0.8; /* Zeilenabstand anpassen */
-  margin: 0; /* Entfernt Außenabstand */
 }
 
 .Herz {
-  margin: 6rem; /* Abstand zwischen Text und Bild */
+  margin: 6rem auto; 
   height: auto;
-
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  width: 100%; 
+  margin-bottom: 5%;
 }
 
-
-
-
-
-
-
-
-
+.Herz img {
+  max-width: 100%; 
+  height: auto;
+}
 
 
 
@@ -80,18 +85,16 @@ h1 {
   position: relative;
   height: 300vh;
   overflow: hidden;
-  margin-bottom: -300vh; /* Add negative margin to reduce the gap */
-  /* border: 2px solid red; Debugging: Add border to see the section */
+  margin-bottom: -300vh; 
 }
 
 .hand-image-container {
   position: absolute;
   top: -10%;
-  left: 10%; /* Changed from -100% to 0 */
+  left: 10%;
   width: 90%;
   height: 100vh;
   background: url('../images/SebiHand.png') center/cover no-repeat;
-  /* border: 2px solid blue; Debugging: Add border to see the container */
 }
 
 .text{
@@ -105,8 +108,8 @@ h1 {
 
 .textsection {
   position: relative;
-  z-index: 10; /* Höher als die Hand */
-  color: white; /* Falls Hintergrund dunkel ist */
+  z-index: 10; 
+  color: white; 
   width: 80%;
   margin-top: 25%;
   margin-left: 20%;
@@ -115,27 +118,16 @@ h1 {
 .rose{
   background: url('../images/rose.png');
   position: absolute;
-  height: 20vh; /* Reduced from 30vh */
-  width: 20vw;  /* Reduced from 30vw */
-  background-size: contain; /* Changed from cover to contain */
+  height: 20vh; 
+  width: 20vw;  
+  background-size: contain; 
   background-position: center;
   background-repeat: no-repeat;
-  margin-top: 16%; /* Adjusted from 20% */
-  margin-left: 8%; /* Added margin-left to position */
-  z-index: 10; /* Ensure it's above other elements */
-  opacity: 0; /* Start invisible for animation */
+  margin-top: 16%; 
+  margin-left: 8%; 
+  z-index: 10; 
+  opacity: 0;
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -147,18 +139,16 @@ h1 {
   position: relative;
   height: 300vh;
   overflow: hidden;
-  margin-bottom: -300vh; /* Add negative margin to reduce the gap */
-  /* border: 2px solid red; Debugging: Add border to see the section */
+  margin-bottom: -300vh; 
 }
 
 .hand-image-container2 {
   position: absolute;
   top: -6%;
-  left: 15%; /* Changed from -100% to 0 */
+  left: 15%; 
   width: 100%;
   height: 100vh;
   background: url('../images/AmelieHand.png') center/cover no-repeat;
-  /* border: 2px solid blue; Debugging: Add border to see the container */
 }
 
 
@@ -173,8 +163,8 @@ h1 {
 
 .textsection2 {
   position: relative;
-  z-index: 10; /* Höher als die Hand */
-  color: white; /* Falls Hintergrund dunkel ist */
+  z-index: 10; 
+  color: white; 
   width: 80%;
   margin-top: 27%;
 
@@ -183,29 +173,16 @@ h1 {
 .mond{
   background: url('../images/mond.png');
   position: absolute;
-  height: 15vh; /* Reduced from 30vh */
-  width: 15vw;  /* Reduced from 30vw */
-  background-size: contain; /* Changed from cover to contain */
+  height: 15vh;
+  width: 15vw; 
+  background-size: contain; 
   background-position: center;
   background-repeat: no-repeat;
-  margin-top: 22%; /* Adjusted from 20% */
-  margin-left: 76%; /* Added margin-left to position */
-  z-index: 10; /* Ensure it's above other elements */
-  opacity: 0; /* Start invisible for animation */
+  margin-top: 22%;
+  margin-left: 76%; 
+  z-index: 10; 
+  opacity: 0; 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* Abschnitt 4 Sebi Hand */
@@ -214,18 +191,17 @@ h1 {
   position: relative;
   height: 300vh;
   overflow: hidden;
-  margin-bottom: -150vh; /* Add negative margin to reduce the gap */
-  /* border: 2px solid red; Debugging: Add border to see the section */
+  margin-bottom: -150vh;
 }
 
 .hand-image-container3 {
   position: absolute;
-  top: -9%;  /* Match the positioning of other hands */
+  top: -9%; 
   left: 10%;
   width: 90%;
   height: 100vh;
-  background: url('../images/SebiHand.png') center/cover no-repeat;  /* Make sure image path is correct */
-  z-index: 1;  /* Add z-index to ensure proper layering */
+  background: url('../images/SebiHand.png') center/cover no-repeat; 
+  z-index: 1; 
 }
 
 .text3{
@@ -239,8 +215,7 @@ h1 {
 
 .textsection3 {
   position: relative;
-  z-index: 10; /* Höher als die Hand */
-  color: white; /* Falls Hintergrund dunkel ist */
+  z-index: 10; 
   width: 80%;
   margin-top: 27%;
   margin-left: 20%;
@@ -249,41 +224,16 @@ h1 {
 .taube{
   background: url('../images/taube.png');
   position: absolute;
-  height: 15vh; /* Reduced from 30vh */
-  width: 15vw;  /* Reduced from 30vw */
-  background-size: contain; /* Changed from cover to contain */
+  height: 15vh; 
+  width: 15vw;  
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  margin-top: 19%; /* Adjusted from 20% */
-  margin-left: 10%; /* Added margin-left to position */
-  z-index: 10; /* Ensure it's above other elements */
-  opacity: 0; /* Start invisible for animation */
+  margin-top: 19%; 
+  margin-left: 10%; 
+  z-index: 10; 
+  opacity: 0; 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -292,30 +242,30 @@ h1 {
 /* Abschnitt 5 Handherz Ende */
 
 .herzhand {
-  height: 1000px; /* Bestehende Höhe */
+  height: 1000px; 
   display: flex;
-  align-items: center; /* Vertikal zentriert */
-  justify-content: center; /* Beide Bilder horizontal ausrichten */
+  align-items: center; 
+  justify-content: center; 
   position: relative;
-  overflow: hidden; /* Verhindert, dass Bilder außerhalb sichtbar sind */
+  overflow: hidden; 
 }
 
 .SebiHerz {
-  width: 70%; /* Breite des Bildes */
-  height: auto; /* Automatische Höhe, proportional zur Breite */
+  width: 70%; 
+  height: auto; 
   position: relative;
-  transform: translateX(100%); /* Start außerhalb des Bildschirms (rechts) */
-  top: -75px; /* Bewegt das Bild 20px nach oben */
-  transition: transform 1.5s ease; /* Optional für sanfte Animation ohne JS */
+  transform: translateX(100%); 
+  top: -75px; 
+  transition: transform 1.5s ease; 
 }
 
 
 .AmelieHerz {
-  width: 78%; /* Breite des Bildes */
-  height: auto; /* Automatische Höhe, proportional zur Breite */
+  width: 78%; 
+  height: auto; 
   position: relative;
-  transform: translateX(-100%); /* Start außerhalb des Bildschirms (links) */
-  transition: transform 1.5s ease; /* Optional für sanfte Animation ohne JS */
+  transform: translateX(-100%); 
+  transition: transform 1.5s ease; 
 }
 
 
@@ -323,26 +273,24 @@ h1 {
 .kussmund1 {
   width: 15%;
   position: absolute;
-  transform: translateX(50%) translateY(50px); /* Verschiebt das Element weiter nach rechts */
-  opacity: 0; /* Unsichtbar */
-  transition: opacity 0.5s ease, transform 0.5s ease; /* Weiche Animation */
+  transform: translateX(50%) translateY(50px); 
+  opacity: 0; 
+  transition: opacity 0.5s ease, transform 0.5s ease; 
 }
 
 
 .kussmund2 {
   width: 15%;
   position: absolute;
-  transform: translateY(100px) scaleX(-1); /* Nach unten verschieben UND horizontal spiegeln */
-  opacity: 0; /* Unsichtbar */
-  transition: opacity 0.5s ease, transform 0.5s ease; /* Weiche Animation */
+  transform: translateY(100px) scaleX(-1); 
+  opacity: 0; 
+  transition: opacity 0.5s ease, transform 0.5s ease; 
 }
 
 .kussmund3 {
   width: 15%;
   position: absolute;
-  transform: translateX(500%) translateY(-50px) scaleX(-1); /* Verschiebt das Element weiter nach oben */
-  opacity: 0; /* Unsichtbar */
-  transition: opacity 0.5s ease, transform 0.5s ease; /* Weiche Animation */
+  transform: translateX(500%) translateY(-50px) scaleX(-1); 
+  opacity: 0; 
+  transition: opacity 0.5s ease, transform 0.5s ease; 
 }
-
-
